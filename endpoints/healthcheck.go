@@ -1,10 +1,10 @@
-package main
+package endpoints
 
 import (
 	"net/http"
 )
 
-func handleHealthCheck(w http.ResponseWriter, r *http.Request) {
+func HandleHealthCheck(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("OK"))
 }

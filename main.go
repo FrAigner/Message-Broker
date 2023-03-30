@@ -2,10 +2,11 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/FrAigner/Message-Broker/endpoints"
 )
 
 func main() {
@@ -13,25 +14,14 @@ func main() {
 	// TODO: Let's Encrypt-Zertifikat abrufen und aktualisieren
 
 	// API-Endpunkte definieren
-	http.HandleFunc("/api/nachrichten", handleNachrichten)
-	http.HandleFunc("/health", handleHealthCheck)
-
+	http.HandleFunc("/api/nachrichten", endpoints.HandleNachrichten)
+	http.HandleFunc("/health", endpoints.HandleHealthCheck)
 	// Server starten
 	log.Println("Server gestartet")
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal("Server konnte nicht gestartet werden: ", err)
 	}
-}
-
-func handleNachrichten(w http.ResponseWriter, r *http.Request) {
-	// TODO: Authentifizierung überprüfen
-	// TODO: UUID für Anfrage generieren
-	// TODO: Nachricht in Datenbank speichern
-	// TODO: Nachricht an Ziele weiterleiten
-
-	// Antwort zurückgeben
-	fmt.Fprintf(w, "Nachricht empfangen und verarbeitet")
 }
 
 type Config struct {
