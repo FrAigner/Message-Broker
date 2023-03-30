@@ -79,6 +79,7 @@ func validateConfig(config Config) error {
 	if config.MySQL.Password == "" {
 		return errors.New("invalid config: missing DB password")
 	}
+
 	if config.API.APIKey == "" {
 		return errors.New("invalid config: missing API key")
 	}
