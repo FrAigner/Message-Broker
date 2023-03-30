@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/FrAigner/Message-Broker/endpoints"
+	"github.com/FrAigner/Message-Broker/apiEndpoints"
 )
 
 func main() {
@@ -14,8 +14,8 @@ func main() {
 	// TODO: Let's Encrypt-Zertifikat abrufen und aktualisieren
 
 	// API-Endpunkte definieren
-	http.HandleFunc("/api/nachrichten", endpoints.HandleNachrichten)
-	http.HandleFunc("/health", endpoints.HandleHealthCheck)
+	http.HandleFunc("/api/nachrichten", apiEndpoints.HandleNachrichten)
+	http.HandleFunc("/health", apiEndpoints.HandleHealthCheck)
 	// Server starten
 	log.Println("Server gestartet")
 	err := http.ListenAndServe(":8080", nil)
