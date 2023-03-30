@@ -1,6 +1,6 @@
 {
     "mysql": {
-        "host": "http://192.168.178.5",
+        "host": "192.168.178.5",
         "port": 3306,
         "username": "db_user",
         "password": "db_user_pass",
