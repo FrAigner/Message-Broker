@@ -1,14 +1,14 @@
 {
     "mysql": {
-        "host": "mein.sql.server.de",
+        "host": "http://192.168.178.5",
         "port": 3306,
-        "username": "appuserdb",
-        "password": "appuserdbpw",
-        "database": "meine_datenbank"
+        "username": "db_user",
+        "password": "db_user_pass",
+        "database": "app_db"
     },
     "api": {
         "api_key": "mein_api_key",
-        "targets": [
+        "MessageTargets": [
             {
                 "name": "MS Teams",
                 "type": "teams",
