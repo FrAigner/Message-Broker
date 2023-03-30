@@ -1,0 +1,31 @@
+{
+    "mysql": {
+        "host": "mein.sql.server.de",
+        "port": 3306,
+        "username": "appuserdb",
+        "password": "appuserdbpw",
+        "database": "meine_datenbank"
+    },
+    "api": {
+        "api_key": "mein_api_key",
+        "targets": [
+            {
+                "name": "MS Teams",
+                "type": "teams",
+                "webhook": "https://outlook.office.com/webhook/..."
+            },
+            {
+                "name": "Slack",
+                "type": "slack",
+                "webhook": "https://hooks.slack.com/services/..."
+            }
+        ]
+    },
+    "letsencrypt": {
+        "email": "meine_email@adresse.de",
+        "domains": [
+            "meine-domain.de",
+            "www.meine-domain.de"
+        ]
+    }
+}
